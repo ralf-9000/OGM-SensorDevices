@@ -25,6 +25,18 @@
     //         DS18B20 & DS1822: store for crc
     // byte 8: SCRATCHPAD_CRC
 
+    // Similar structure of MAX31850 (be aware of fault status
+    // BYTE 0 COLD-JUNCTION-COMPENSATED THERMOCOUPLE TEMPERATURE LSB AND FAULT STATUS (00h)
+    // BYTE 1 COLD-JUNCTION-COMPENSATED THERMOCOUPLE TEMPERATURE MSB (00h)
+    // BYTE 2 INTERNAL (COLD JUNCTION) TEMPERATURE AND FAULT STATUS LSB (00h)
+    // BYTE 3 INTERNAL (COLD JUNCTION) TEMPERATURE MSB (00h)
+    // BYTE 4 CONFIGURATION REGISTER*
+    // BYTE 5 RESERVED (FFh)
+    // BYTE 6 RESERVED (FFh)
+    // BYTE 7 RESERVED (FFh)
+    // BYTE 8 CRC
+    // *THE LOWER 4 BITS (AD[3:0]) OF THE CONFIGURATION REGISTER ARE HARDWIRED THROUGH AD0–AD
+
     // Model commands
     #define STARTCONVO 0x44      // Tells device to take a temperature reading and put it on the scratchpad
     #define COPYSCRATCH 0x48     // Copy EEPROM
