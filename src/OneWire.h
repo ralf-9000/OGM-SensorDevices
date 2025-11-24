@@ -24,6 +24,7 @@
     #define MODEL_DS2413 0x3A // 2-Channel IO
     #define MODEL_DS2408 0x29 // 8-Channel IO
     #define MODEL_DS1990 0x01 // iButton
+    #define MODEL_MAX31850 0x3B // Thermoelement-Sensor
 
     #define ModelFunction_Default 0
     #define ModelFunction_IoBit0 1
