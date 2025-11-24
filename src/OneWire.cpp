@@ -55,6 +55,7 @@ OneWire* OneWire::factory(tIdRef iId, bool* eIsNew)
         {
             case MODEL_DS18B20:
             case MODEL_DS18S20:
+            case MODEL_MAX31850: 
                 lSensor = (new OneWireDS18B20(iId));
                 break;
             case MODEL_DS1990:
